@@ -1,5 +1,6 @@
 import React from 'react';
+import FormInputPage from '../../pages/FormInputPage';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <FormInputPage />;
 }
