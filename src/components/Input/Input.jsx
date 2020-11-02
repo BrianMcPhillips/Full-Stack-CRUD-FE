@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const formInput = ({ 
+const FormInput = ({ 
+  
   model, 
   brand, 
   pattern, 
@@ -13,6 +14,7 @@ const formInput = ({
   return ( 
     <>
       <form onSubmit={onSubmit} >
+        <h2>Create Microphone Item</h2>
         <label htmlFor="model">
           <h3>Model</h3>
           <input 
@@ -73,16 +75,16 @@ const formInput = ({
   );
 };
 
-formInput.propTypes = {
+FormInput.propTypes = {
   model: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   pattern: PropTypes.string.isRequired,
   microphoneType: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   summary: PropTypes.string.isRequired,
-  onChange: PropTypes.string.isRequired,
-  onSubmit: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired
 };
 
-export default formInput;
+export default FormInput;
 
